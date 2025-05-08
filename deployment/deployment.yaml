@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: data-processing-service
-          image: krishnasravi/data-service:v1
+          image: krishnasravi/data-service:v1.2
           ports:
             - containerPort: 8081
 #          resources:
