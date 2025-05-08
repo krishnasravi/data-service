@@ -1,0 +1,27 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-processing-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-processing-service
+  template:
+    metadata:
+      labels:
+        app: data-processing-service
+    spec:
+      containers:
+        - name: data-processing-service
+          image: krishnasravi/data-service:v1
+          ports:
+            - containerPort: 8081
+#          resources:
+#            requests:
+#              cpu: "100m"
+#              memory: "256Mi"
+#            limits:
+#              cpu: "500m"
+#              memory: "512Mi"
